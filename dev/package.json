@@ -1,0 +1,19 @@
+{
+  "name": "iheros",
+  "version": "1.0.0",
+  "description": "teste pratico",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Reginaldo1239/challenges/tree/master/dev"
+  },
+  "author": "reginaldo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
