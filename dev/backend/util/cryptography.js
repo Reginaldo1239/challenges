@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken')
 exports.gerarTokenJwt = (objectWithValues)=>{
     console.log(objectWithValues)
      return new Promise((resolver,reject)=>{
@@ -14,7 +15,6 @@ exports.gerarTokenJwt = (objectWithValues)=>{
             reject(false);
             console.log(e);
     }
-    
      })
 }
 
