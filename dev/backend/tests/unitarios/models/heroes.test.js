@@ -1,7 +1,4 @@
 const heroesModel =require('../../../models/heroes');
-const confi = require('../../../jest.config');
-const path = require('path');
-
 let newHero;
 const ID_USUARIO=1;
 
