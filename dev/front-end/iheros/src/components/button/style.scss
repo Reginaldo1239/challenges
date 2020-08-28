@@ -1,0 +1,30 @@
+@import '../../main.scss';
+.button{
+    margin-top: 5px;
+    button{
+        border-radius: 5px;
+        padding:5px;
+        border-width: 0;
+        font-size: 17px;
+        color:white;
+        outline: none;
+        background-color:$blueLight;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: blue;
+    
+    }
+    button:active{
+        opacity: 0.6;
+        background-color: blue;
+        color:white;
+
+
+      
+    }
+    .button:focus{
+     
+        
+      }
+} 
