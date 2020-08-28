@@ -1,17 +1,18 @@
+require('dotenv').config()
 var mysql = require('mysql');
 const CONFIG = require('../config'); 
 
-require('dotenv').config()
 const pool  = mysql.createPool({
     connectionLimit : 1000,
     host            : CONFIG.HOST_DB,
     user            : CONFIG.DB_USER_NAME,
     password        : CONFIG.DB_USER_PASSWORD,
     database        : CONFIG.DB_NAME
-  
-  
-  });  
+  });   
   exports.insert=async (table,post)=>{
+   // console.log('CONFIG')
+    //console.log(CONFIG) 
+    //console.log(process.env.NODE_ENV)
    return new Promise((resolver,reject)=>{   pool.getConnection((err,connection)=>{
    console.log(err)
         if (err) throw err; // not connected!
@@ -68,11 +69,15 @@ const pool  = mysql.createPool({
           pool.getConnection((err,connection)=>{
             connection.query(query, function (error, results, fields) {
               // query ="delete from table where "
-              if (error) throw error;
-              console.log(error)
-              console.log(results)
-              resolver(results);
-              reject(error)
+              if (error){
+                throw error;
+                console.log(error)
+                reject(error)
+              }
+            
+          
+              resolver(results); 
+             
             })
             connection.release();
           })

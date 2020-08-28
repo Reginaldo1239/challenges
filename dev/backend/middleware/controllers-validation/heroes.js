@@ -7,8 +7,8 @@ exports.newHero =async (req,res,next)=>{
     let error = {msg:''};
    
     if(!validacao.minLength(nome,1)){
-        errors.push({nome:' está vazio'});
-        error.msg = 'o parametro nome está vazio';
+        errors.push({nome:'é obrigatorio'});
+        error.msg = 'o parametro nome é obrigatorio'; 
      }else if(!validacao.maxLength(nome,30)){
         errors.push({nome:'aceita no maximo 30 caracteres'})
         error.msg = 'o parametro nome aceita no maximo 30 caracteres'
@@ -27,7 +27,7 @@ exports.newHero =async (req,res,next)=>{
     }
     if(!validacao.minLength(classe,1)){
         errors.push({classe:' está vazio'});
-        error.msg = 'o parametro classe está vazio';
+        error.msg = 'o parametro classe é obrigatorio';
     }else if(!validacao.classeHero(classe)){
         errors.push({classe:'invalida aceitamos apenas S,A,B,C como classes'})
         error.msg ='o parametro classe invalida aceitamos apenas S,A,B,C como classes validas';
@@ -82,20 +82,26 @@ exports.listHeroes =(req,res,next)=>{
     let {page,limit}= req.query;
     let errors =[];
     let msgError ={msg:''};
-    if(!validacao.minLength(page)){
+    if(!validacao.minLength(page,1)){
         errors.push({page:'parametro é obrigatorio'});
         msgError.msg='parametro limit é obrigatorio';
-    }
-    if(!validacao.minLength(limit)){
-        errors.push({page:'parametro é obrigatorio'});
+    }else if(!validacao.isNumber(page)){
+        errors.push({limit:'o parametro page aceita apenas numeros'});
+        msgError.msg='o parametro page aceita apenas numeros';  
+    } 
+    if(!validacao.minLength(limit,1)){
+        errors.push({limit:'parametro é obrigatorio'});
         msgError.msg='parametro limit é obrigatorio';
+    }else if(!validacao.isNumber(limit)){
+        errors.push({limit:'o parametro limit aceita apenas numeros'});
+        msgError.msg='o parametro limit aceita apenas numeros';  
     }else if(limit>100){
-        errors.push({page:'parametro é obrigatorio'});
+        errors.push({limit:'parametro é obrigatorio'});
         msgError.msg='parametro page retorna no maximo 100 heroes por solicitação';
     }
     if(errors.length===0){
-        next();
-    }else{
+        next(); 
+    }else{ 
         res.status(400).send(msgError);
     }
 }

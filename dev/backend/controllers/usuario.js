@@ -8,12 +8,12 @@ exports.login= async (req,res)=>{
     let msgErro= {msg:''};    
     let usuarioValido;
     if(!validacao.minLength(nome,1)){
-        erros.push({nome:'está vazio'});
-        msgErro.msg= 'o parametro nome está vazio';
+        erros.push({nome:'é obrigatorio'});
+        msgErro.msg= 'o parametro nome é obrigatorio';
     }
     if(!validacao.minLength(senha,1)){
         erros.push({senha:'está vazio'});
-        msgErro.msg= 'o parametro senha está vazio';
+        msgErro.msg= 'o parametro senha é obrigatorio';
     }
 
  if(erros.length===0){ 

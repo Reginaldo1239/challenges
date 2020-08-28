@@ -32,7 +32,7 @@ test('model function newHero ',async()=>{
 })  
 
 test('model fuction getOneHero',async()=>{
-   let getOneHero = await heroesModel.getOneHero({id_usuario:1,id_hero:30});
+   let getOneHero = await heroesModel.getOneHero({id_usuario:1,id_hero:446});
  //  h.id_hero,h.id_usuario,h.nome,h.classse,h.lat,h.lng  
    expect(getOneHero[0]).toEqual(expect.objectContaining(
       {
@@ -49,7 +49,7 @@ test('model fuction getOneHero',async()=>{
 test('modal function updateHero()',async()=>{
    let values = {
       id_usuario:ID_USUARIO,
-      id_hero:30,
+      id_hero:50, 
       nome:'newName'+Date.now(),
       class:'A',
       lng:-23.56357870,
@@ -70,21 +70,25 @@ test('moda function listHeroes()',async()=>{
    }
    let listHeroes =await heroesModel.listHeroes(values); 
    listHeroes.map(hero=>{
+    
       expect(hero).toEqual(expect.objectContaining(
          {
                id_hero:expect.any(Number),
                id_usuario:expect.any(Number),
                nome:expect.any(String),
-               classe:expect.any(String), 
+               classe:expect.any(String),
                lat:expect.any(Number),
                lng:expect.any(Number)    
          }
-      ))
+         
+      )) 
+
    })
-})
+}) 
 
-
+   
 test('model fuction deleteHero ()',async()=>{
+   
    let deleteHero = await heroesModel.deleteHero({id_usuario:1,id_hero:newHero.insertId});
    expect(deleteHero).toEqual(expect.objectContaining({affectedRows:1}))
 })

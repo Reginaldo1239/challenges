@@ -7,15 +7,17 @@ exports.newHero =async (req,res)=>{
     let {id_usuario} = req.headers;
     let errors = [];
     let error = {msg:''};
-   
+ /*  
    let latELng= await  geoCoding.getLatitudeELongiture({cidade:'sao paulo',bairro:'pinheiros',pais:'brasil'});
     if(latELng===false){
         errors.push({latELng:'ocorreu algumm erro ao obter as coordenadas geograficas,verifique o endereço'})
         error.msg ='ocorreu algumm erro ao obter as coordenadas geograficas,verifique o endereço';
     }
-
+    console.log('teasdfdd')*/
     if(errors.length===0){
-        let {lat,lng} = latELng;
+       // let {lat,lng} = latELng;
+       let lat= -23.56357870 ;
+       let lng =  -46.69160680;
         try{
             let resultInsertNewHero =  await heroModel.newHero({id_usuario,nome,classe,lat,lng});
                 resultInsertNewHero.affectedRows>0?res.status(201).send(resultInsertNewHero):res.status(503).send(CONFIG.ERROR503);
@@ -35,17 +37,20 @@ exports.updateHero =async (req,res)=>{
     let errors = [];
     let error = {msg:''};
     
-    let latELng= await  geoCoding.getLatitudeELongiture({cidade:'sao paulo',bairro:'pinheiros',pais:'brasil'});
+ /*  
+   let latELng= await  geoCoding.getLatitudeELongiture({cidade:'sao paulo',bairro:'pinheiros',pais:'brasil'});
     if(latELng===false){
         errors.push({latELng:'ocorreu algumm erro ao obter as coordenadas geograficas,verifique o endereço'})
         error.msg ='ocorreu algumm erro ao obter as coordenadas geograficas,verifique o endereço';
     }
-
+    console.log('teasdfdd')*/
     if(errors.length===0){
-        let {lat,lng} = latELng;
+        // let {lat,lng} = latELng;
+        let lat= -23.56357870 ;
+        let lng =  -46.69160680;
         try{
-            let resultUpdatedNewHero =  await heroModel.updateHero({id_usuario,nome,classe,lat,lng});
-            resultUpdatedNewHero.affectedRows>0?res.status(201).send(resultUpdatedNewHero):res.status(503).send('sss');
+            let resultUpdatedNewHero =  await heroModel.updateHero({id_usuario,nome,classe,lat,lng,id_hero});
+            resultUpdatedNewHero.affectedRows>0? res.status(200).send(resultUpdatedNewHero):res.status(503).send('sss');
         }catch(e){
             console.log(e)
             res.status(503).send('ddd');
@@ -57,18 +62,18 @@ exports.updateHero =async (req,res)=>{
 
 
 exports.listHeroes = async (req,res)=>{
-    let id_usuario= req.headers;
+    let {id_usuario}= req.headers;
     let {page,limit}= req.query;
-     try{   
+     try{    
         let resultListHeroes = await heroModel.listHeroes({id_usuario,limit,page});
             if(resultListHeroes.length>0){
-                req.status(200).send(resultListHeroes);
+                res.status(200).send(resultListHeroes);
             }else{
                 res.status(404).send(CONFIG.ERROR404);
             }
         }catch(e){
             res.status(503).send(CONFIG.ERROR503);
-        }   
+        }    
 }
 
 exports.getOneHero= async (req,res)=>{
@@ -89,7 +94,7 @@ exports.getOneHero= async (req,res)=>{
 }
 exports.deleteHero =async (req,res)=>{
     let {id_hero}= req.params;
-    let {id_usuario} = req.headers;
+    let {id_usuario} = req.headers; 
    try{
         let resultDeleteHero = await heroModel.deleteHero({id_usuario,id_hero});
             if(resultDeleteHero.affectedRows>0){
