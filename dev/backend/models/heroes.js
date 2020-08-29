@@ -2,15 +2,15 @@ const db = require('../db/index');
 
 exports.newHero= async (values)=>{
     const TABLE = 'heroes';
-    let {id_usuario,nome,classe,lat,lng}= values;
+    let {id_usuario,nome,classe,lat,lng,cidade,bairro,pais}= values;
 
-    let post={id_usuario,nome,classe,lat,lng};
+    let post={id_usuario,nome,classe,lat,lng,cidade,bairro,pais};
     return await db.insert(TABLE,post);
 }
 exports.updateHero = async (values)=>{
-    let {id_usuario,id_hero,nome,classe,lat,lng} =values;
+    let {id_usuario,id_hero,nome,classe,lat,lng,cidade,bairro,pais} =values;
  //   'UPDATE users SET foo = ?, bar = ?, baz = ? WHERE id = ?', ['a', 'b', 'c'
-    let query = "UPDATE heroes SET nome= ?, classe = ? , lat = ? ,lng = ? WHERE id_usuario=? AND id_hero=? LIMIT 1";
+    let query = "UPDATE heroes SET nome= ?, classe = ? , lat = ? ,lng = ? cidade=?,bairro=?,pais=? WHERE id_usuario=? AND id_hero=? LIMIT 1";
     let valuesOfQuery = [nome,classe,lat,lng,id_usuario,id_hero];
     return await db.update(query,valuesOfQuery);
 }

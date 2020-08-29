@@ -3,7 +3,7 @@ const heroModel = require('../models/heroes');
 const  geoCoding = require('../servicos/geoCoding');
 const CONFIG = require('../config');
 exports.newHero =async (req,res)=>{
-    let {nome,classe,cidade,bairro} = req.body;
+    let {nome,classe,cidade,bairro,pais} = req.body;
     let {id_usuario} = req.headers;
     let errors = [];
     let error = {msg:''};
@@ -19,7 +19,7 @@ exports.newHero =async (req,res)=>{
        let lat= -23.56357870 ;
        let lng =  -46.69160680;
         try{
-            let resultInsertNewHero =  await heroModel.newHero({id_usuario,nome,classe,lat,lng});
+            let resultInsertNewHero =  await heroModel.newHero({id_usuario,nome,classe,lat,lng,cidade,bairro,pais});
                 resultInsertNewHero.affectedRows>0?res.status(201).send(resultInsertNewHero):res.status(503).send(CONFIG.ERROR503);
         }catch(e){
             console.log(e)
@@ -33,7 +33,7 @@ exports.newHero =async (req,res)=>{
 exports.updateHero =async (req,res)=>{
     let {id_usuario} = req.headers;
     let {id_hero} = req.params;
-    let {nome,classe,cidade,bairro} = req.body;
+    let {nome,classe,cidade,bairro,pais} = req.body;
     let errors = [];
     let error = {msg:''};
     
@@ -49,7 +49,7 @@ exports.updateHero =async (req,res)=>{
         let lat= -23.56357870 ;
         let lng =  -46.69160680;
         try{
-            let resultUpdatedNewHero =  await heroModel.updateHero({id_usuario,nome,classe,lat,lng,id_hero});
+            let resultUpdatedNewHero =  await heroModel.updateHero({id_usuario,nome,classe,lat,lng,id_hero,cidade,bairro,pais});
             resultUpdatedNewHero.affectedRows>0? res.status(200).send(resultUpdatedNewHero):res.status(503).send('sss');
         }catch(e){
             console.log(e)
