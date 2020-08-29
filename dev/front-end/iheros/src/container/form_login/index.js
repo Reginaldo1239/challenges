@@ -1,4 +1,6 @@
 import React,{useState} from 'react';
+import { useHistory } from "react-router-dom";
+
 import Label from '../../components/label';
 import Button from '../../components/button';
 import MsgError from '../../components/msgError';
@@ -7,7 +9,7 @@ import {post} from '../../api/index';
 import {saveData} from '../../util/local_storage';
 import './style.scss'; 
 export default function FormLogin(props){
-
+    let history = useHistory();
     const [name,setName] = useState('');
     const [password,setPassword] = useState('');
     const [nameError,setNameError]  =useState('');
@@ -22,6 +24,7 @@ export default function FormLogin(props){
                 senha:password
             }
             let endPoint = '/public/login';
+          try{ 
             let loginUser = await post(endPoint,body);
             let data;
             if(loginUser.status==200){
@@ -29,15 +32,18 @@ export default function FormLogin(props){
                 saveData('token',data.token);
                 saveData('id_usuario',data.id_usuario);
                 saveData('nome',data.nome)
-                window.location.pathname='/hero';
+                history.push('/hero');
             }else if(loginUser.status==404){
                 data = await loginUser.data;
                 setPasswordError(data.msg)
             }else{
                 alert('ocorreu um erro tente novamente mais tarde');
-                
             }
-        }
+            }catch(e){
+               console.log(e)
+            }
+
+        } 
     }
     const validarForm=()=>{
         
