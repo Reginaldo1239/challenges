@@ -10,10 +10,10 @@ exports.newHero= async (values)=>{
 exports.updateHero = async (values)=>{
     let {id_usuario,id_hero,nome,classe,lat,lng,cidade,bairro,pais} =values;
  //   'UPDATE users SET foo = ?, bar = ?, baz = ? WHERE id = ?', ['a', 'b', 'c'
-    let query = "UPDATE heroes SET nome= ?, classe = ? , lat = ? ,lng = ? cidade=?,bairro=?,pais=? WHERE id_usuario=? AND id_hero=? LIMIT 1";
-    let valuesOfQuery = [nome,classe,lat,lng,id_usuario,id_hero];
+    let query = "UPDATE heroes SET nome= ?, classe = ? , lat = ? ,lng = ? ,cidade=? , bairro=?, pais=? WHERE id_usuario=? AND id_hero=? LIMIT 1";
+    let valuesOfQuery = [nome,classe,lat,lng,cidade,bairro,pais,id_usuario,id_hero];
     return await db.update(query,valuesOfQuery);
-}
+} 
 exports.getOneHero= async (values)=>{
     let {id_usuario,id_hero} = values;
     let query = "SELECT h.id_hero,h.id_usuario,h.nome,h.classe,h.lat,h.lng,h.bairro,h.cidade,h.pais  from heroes As h WHERE h.id_usuario=? AND h.id_hero=?";
