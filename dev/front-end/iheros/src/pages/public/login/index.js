@@ -1,6 +1,6 @@
 import React from 'react';
-import FormLogin from '../../../container/form-login';
-import './style.scss';
+import FormLogin from '../../../container/form_login';
+import './style.scss'; 
 export default function Login(props){
 
     return(
