@@ -1,0 +1,31 @@
+@import '../../main.scss';
+.component_item_list_hero{
+    max-width: 500px;
+    background-color:$grayLight;
+    margin-left: 100px;
+    border-bottom: 0.1px solid $blueLight;
+    .box{ 
+            width: 16.6%; 
+            padding:10px 5px;
+            text-align: center;  
+        }
+        .box:nth-last-child(2){
+            a{
+                color:$blueLight;
+                cursor: pointer;
+                text-decoration:none;
+            }
+            a:hover{
+                text-decoration:underline;
+            }
+        }
+        .box:last-child{
+            span{
+                color:red;
+                cursor: pointer;
+            }
+            span:hover{
+                text-decoration:underline;
+            }
+        }
+}  
