@@ -16,7 +16,7 @@ exports.updateHero = async (values)=>{
 }
 exports.getOneHero= async (values)=>{
     let {id_usuario,id_hero} = values;
-    let query = "SELECT h.id_hero,h.id_usuario,h.nome,h.classe,h.lat,h.lng  from heroes As h WHERE h.id_usuario=? AND h.id_hero=?";
+    let query = "SELECT h.id_hero,h.id_usuario,h.nome,h.classe,h.lat,h.lng,h.bairro,h.cidade,h.pais  from heroes As h WHERE h.id_usuario=? AND h.id_hero=?";
     let valuesOfQuery = [id_usuario,id_hero];
     return await db.select(query,valuesOfQuery); 
 }
