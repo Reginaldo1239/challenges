@@ -24,9 +24,9 @@ exports.batalhas = (req,res,next)=>{
     msgError.msg=`o parametro limit retorna no máximo ${LIMIT_FOR_REQUEST} batalhas por solicitação`;
  }
  
- if(errors.length>0){
-     res.status(400).send(msgError);
- }else{
+ if(errors.length===0){
      next();
+ }else{
+    res.status(400).send(msgError);
  }
 }
