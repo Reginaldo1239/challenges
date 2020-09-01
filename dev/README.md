@@ -1,7 +1,7 @@
 <h2>I heros</h2>
 <p>Projeto desenvolvido com node js,react,mysql</p>
 <p>para rodar o projeto</p>
-<span>git clone https://github.com/Reginaldo1239/challenges.git</span>
+<div><span>git clone https://github.com/Reginaldo1239/challenges.git</span></div>
 <p>front-end na pasta dev/front-end/iheros execute o comando npm install e apos instalar as depedencias , npm start</p>
 <p>backend na pasta dev/backend npm install para instalar as depedencias e  node app.js <p>
 <p>para executar os testes no backend va para a pasta  dev/backend execute npm run test, para rodar os testes de integração é necessario que você já tenha executado node app.js e o backend tem que estar online  <p>
