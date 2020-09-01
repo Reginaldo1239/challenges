@@ -1,5 +1,6 @@
-require('dotenv').config()
-var express = require('express')
+require('dotenv').config();
+var express = require('express');
+const CONFIG = require('./config');
 
 var app = express()
 var http = require('http').createServer(app);
@@ -16,8 +17,8 @@ app.use(express.json()) // for parsing application/json
 app.use('/public',routerPublic);
 app.use('/',authMiddleware.authUser,routerPrivate);
 
-http.listen(3005, () => { 
-  console.log('listening on *:3000');
+http.listen(CONFIG.PORT, () => { 
+  console.log(`listening on *:${CONFIG.PORT}`);
 //  console.log(config); 
 })
 
