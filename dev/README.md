@@ -3,7 +3,7 @@
 <p>git clone https://github.com/Reginaldo1239/challenges.git</p>
 <p>front-end na pasta dev/front-end/iheros execute o comando npm install e apos instalar as depedencias , npm start</p>
 <p>backend na pasta dev/backend npm install para instalar as depedencias e  node app.js <p>
-<p>para executar os testes no backend, na pasta  dev/backend execute npm run test <p>
+<p>para executar os testes no backend va para a pasta  dev/backend execute npm run test, para rodar os testes de integração é necessario que você já tenha executado node app.js e o backend tem que estar online  <p>
 <div>
 <h4>dependecias front-end em React </h4>
 <ul>
@@ -33,20 +33,20 @@
 </div>
 
 <div>
-  <span>como um dos requisitos no momento de selecionar o heroi é que tinha que ser  mais proximo, adicionei a opcao de enviar o endereço do heroi e no backend  troquei o endereço por latitude e longitude usando a api do google geocoding, e no momento de selecionar o heroi uso uma query para selecionar o heroi pela classe  e o mais proximo da localidade do mostro, para usar api do google é necessario uma key que vou deixar ativa temporariamente para facilitar a execucao do projeto. caso você queira usar uma chave propia basta atualizar a variavel KEY_GOOGLE no backend/.env </span>
-
-
-    <p> validações backend </p>
-    <span>As validações são feitas nos arquivos de middlewares dos valores que são enviados do front-end; </span>
+  <p>como um dos requisitos no momento de selecionar o heroi é que tinha que ser  mais proximo, adicionei a opcao de enviar o endereço do heroi e no backend  troquei o endereço por latitude e longitude usando a api do google geocoding, e no momento de selecionar o heroi uso uma query para selecionar o heroi pela classe  e o mais proximo da localidade do mostro, para usar api do google é necessario uma key que vou deixar ativa temporariamente para facilitar a execucao do projeto. caso você queira usar uma chave propia basta atualizar a variavel KEY_GOOGLE no backend/.env </p>
+    <h2>validações backend</h2>
+      <span>As validações são feitas nos arquivos de middlewares dos valores que são enviados do front-end; </span>
     <p>no momento de cadastrar um novo heroi,nao fiz uma verificao se ja existia um nome do heroi cadastrado antes da insersao no banco de dados, porque considerei que poderia exister herois com o mesmo nome</p>
-
-
-    <p>socket</p>
-    <span>criei uma pasta socket-client para facilitar a localização de funçoes relacionas a socket e um models/socket-client.js para manipular o banco de dados</span>
-
-
-    <h2>jwt</h2>
-    <span>jwt deixei o token com validade infinita pois em ambiente de desenvolvimento é melhor para testar, mas pode ser colocado um periodo de validade </span>
+    <h2>socket</h2>
+       <p>criei uma pasta socket-client para facilitar a localização de funçoes relacionas a socket e um models/socket-client.js para manipular o banco de dados</p>
+        <h2>jwt</h2>
+            <p>jwt deixei o token com validade infinita pois em ambiente de desenvolvimento é melhor para testar, mas pode ser colocado um periodo de validade </p>
 </div>
+
+  
+
+
+
+
 
    
