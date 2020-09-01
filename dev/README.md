@@ -1,4 +1,5 @@
 <h2>I heros</h2>
+<p>Projeto desenvolvido com node js,react,mysql</p>
 <p>para rodar o projeto</p>
 <span>git clone https://github.com/Reginaldo1239/challenges.git</span>
 <p>front-end na pasta dev/front-end/iheros execute o comando npm install e apos instalar as depedencias , npm start</p>
