@@ -1,0 +1,30 @@
+@import '../../main.scss';
+.component_criar_ou_editar_hero{
+    max-width: 400px;
+    background-color: $grayLight;
+    form.flex{
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    header{
+        width: 100%;
+        text-align: center;
+    }
+    .form_group{
+        width: 50.1%;
+        input,select,option{
+            width: 100%;
+            font-size: 18px;
+            border-radius: 5px;
+            outline: none;
+            border:none ;
+            background-color: white;
+            padding: 5px;
+        }
+        select{
+            padding: 2px;
+        }
+    
+    }
+}

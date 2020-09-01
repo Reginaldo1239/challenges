@@ -1,0 +1,23 @@
+
+.center{
+    margin: 0 auto;
+    max-width: 1280px;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.w100{
+    width: 100%;
+} 
+.align_text_rigth{
+    text-align: right;  
+ }
+ .align_text_left{
+     text-align: left;
+ }
+ .align_text_center{
+    text-align: center;
+}
+$blueLight:#3B4EDC;  
+$grayLight:#F8F8F8;   

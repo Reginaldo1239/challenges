@@ -12,28 +12,37 @@
          background-color: black;
          color:white;
      }
+     .box{
+        width:17.3% ; 
+        padding:6px 5px; 
+    } 
      .box:first-child{
          width:20% ; 
      }
+
      .box:nth-of-type(2){
          width: 8%;
-     }
-    .box{ 
-            width: 10%; 
-            padding:6px 0px; 
-          
-        } 
-        .box:nth-last-child(2){
-            a{
-                color:$blueLight;
-                cursor: pointer;
-                text-decoration:none;
-            }
-            a:hover{
-                text-decoration:underline;
-            }
+    } 
+     .box:nth-of-type(6){
+        width: 10%;
+        a{
+            color:$blueLight;
+            cursor: pointer;
+            text-decoration:none;
         }
-        .box:last-child{
+        a:hover{
+            text-decoration:underline;
+            
+        }
+        a:visited{
+            color:$blueLight;
+        }
+        a:active{
+            color:$blueLight;
+        }
+    }
+    .box:nth-of-type(7){
+        width: 10%;
             span{
                 color:red;
                 cursor: pointer;
@@ -41,7 +50,10 @@
             span:hover{
                 text-decoration:underline;
             }
-        }
+        
+    }
+
+    
     }
 }  
 
@@ -89,3 +101,4 @@
 
     }
 }
+

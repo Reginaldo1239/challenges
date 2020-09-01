@@ -1,5 +1,8 @@
 @import '../../main.scss';
 .component_logo{
+    a{
+        text-decoration: none;
+    }
     span{
         font-size:25px;
          color:$blueLight;

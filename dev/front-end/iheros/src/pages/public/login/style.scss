@@ -3,6 +3,7 @@
 .login{
    // background-color:#ccc;
     min-height: 100vh;
+ 
     header{
         padding:15px 0;
         margin-top:20px;
@@ -18,4 +19,27 @@
             }
         } 
     }
+ 
 }  
+
+@media only screen and (max-width: 576px) {
+    .login{
+        header{
+            padding:15px 0;
+            margin-top:20px;
+            border-bottom: none;
+            .flex{
+                justify-content: center;
+            }
+            .box{
+                width: 80%;
+            }
+            .logo{
+                span{
+                    font-size:25px;
+                    color:$blueLight;
+                }
+            } 
+        }
+}
+}

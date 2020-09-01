@@ -1,0 +1,27 @@
+.hero_page{
+    width: 100%;
+    min-height: 100vh;
+
+   
+ main{ 
+
+    .novo_heroi{
+        width: 100%;
+max-width:800px;
+        .flex{
+            justify-content: flex-end;
+        }
+        
+    }
+    .flex{
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    header{
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+    }
+   }
+}
+}

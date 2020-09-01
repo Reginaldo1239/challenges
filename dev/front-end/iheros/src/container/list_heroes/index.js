@@ -1,9 +1,15 @@
+
 import React,{useState,useEffect} from 'react';
 import {useHistory} from 'react-router-dom';
 import ItemListHero from '../../components/item_list_hero';
 import Paginacao from '../../components/paginacao';
-import {get} from '../../api/index'; 
+import{ removeData } from '../../util/local_storage';
+import {get,del} from '../../api/index'; 
+import {cleanAuth} from '../../util/common';
 import './style.scss';
+
+require('dotenv').config()
+
 export default function ListHeroes (props){
     //LIMIT e quantidade maxima de herois que deve ser retornado por request
     let history = useHistory();
@@ -13,9 +19,12 @@ export default function ListHeroes (props){
     const [listHeroes,setListHeroes] = useState([]);
     const [listaHeroisVazia,setListaHeroisVazia] = useState(false)
     useEffect(()=>{
+       
+      console.log( process.env)
+      
         getListHeroes();
        
-    },[page]) 
+    },[page])  
 
     useEffect(()=>{
         if(listHeroes.length===0 &&page==1){
@@ -36,11 +45,22 @@ export default function ListHeroes (props){
                 }else if(listHeroes.status===404){
                     setListHeroes([]);
                 }if(listHeroes.status===401){
-                    history.push('/login');
+                    cleanAuth();
+                    history.push('/');
                 } 
         }catch(e){
             console.log(e);
         
+        }
+    }
+
+    const deleteHero= async (id_hero)=>{
+        let resulDeleteHero = await del(`/hero/${id_hero}`);
+        if(resulDeleteHero.status===200){
+            resulDeleteHero =await resulDeleteHero.data;
+            if(resulDeleteHero.affectedRows===1){
+                getListHeroes();
+            }
         }
     }
     const  handleChangePage=(value)=>{
@@ -61,8 +81,11 @@ export default function ListHeroes (props){
              ):(
                 <> 
                 <div className="box_heroes">
-                {listHeroes.map((hero,index)=>
-                    <ItemListHero values={hero}  index ={index}></ItemListHero>) }
+                {listHeroes.map((hero,index)=> 
+                    <ItemListHero
+                    deletehero={(id_hero)=>deleteHero(id_hero)}
+                     key={hero.id_hero} values={hero} 
+                     index ={index}></ItemListHero>) }
                 </div>
                 <div className="box_paginacao">
                 <Paginacao

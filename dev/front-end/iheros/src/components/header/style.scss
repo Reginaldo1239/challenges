@@ -1,15 +1,20 @@
 @import '../../main.scss';
 .component_header{
-        margin-top:20px;
+        padding-top:20px;
         border-bottom: 1px solid $blueLight;
+        width: 100%;
   .flex{
         justify-content: space-between;
     }
     .sair{
+        cursor: pointer;
         margin-top: 10px;
-        a{
-            text-decoration:none;
+        span{
             color:black;
         }
     }
+ 
+@media only screen and (max-width: 768px) {
+    padding:20px 5px;
 }
+}  

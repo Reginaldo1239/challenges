@@ -1,0 +1,14 @@
+@import '../../../main.scss';
+
+.page_criar_hero{
+   position: relative;
+   min-height: 100vh;
+    main{
+        margin-top: 20px;
+      
+        .flex{
+            justify-content: center;
+        }
+    }
+    
+}

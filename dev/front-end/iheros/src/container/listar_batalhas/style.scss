@@ -1,0 +1,50 @@
+@import '../../main.scss';
+.listar_batalhas_container{
+    width: 100%;
+    margin-top: 10px;
+
+    .list{
+        width: 100%;
+    }
+    .flex{
+      align-items: flex-start;
+      width: 100%;
+
+    }
+} 
+
+
+@media only screen and (max-width: 768px) {
+    .listar_batalhas_container{
+        width: 100%;
+        margin-top: 10px;
+    
+        .list{
+            min-height: 400px;
+            .flex{
+                justify-content: space-between;
+           
+               }
+        }
+       
+    } 
+    
+}
+
+
+@media only screen and (max-width: 576px) {
+    .listar_batalhas_container{
+        width: 100%;
+        margin-top: 10px;
+    
+        .list{
+            min-height: 400px;
+            .flex{
+                justify-content: space-between;
+           
+               }
+        }
+       
+    } 
+    
+}

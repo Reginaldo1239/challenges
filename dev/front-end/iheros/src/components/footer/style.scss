@@ -1,0 +1,11 @@
+@import '../../main.scss';
+footer.footer_component{
+    width: 100%;
+    padding: 20px;
+    background-color:$grayLight;
+ 
+    span{
+        color:$blueLight;
+        font-size: 20px;
+    }
+} 

@@ -1,0 +1,31 @@
+@import '../../main.scss';
+.component_paginacao{
+    margin: 15px 0;
+    .flex{
+        justify-content: center;
+    }
+    .button{
+        background-color: $blueLight;
+        margin: 0 5px;
+        padding:0 1px;
+        border-radius: 5px;
+        button{
+        text-align: center;
+        margin-top:5px;
+        }
+    }
+    .button:hover{
+        background-color: blue;
+    }
+    .input{
+        display: inline-block;
+        width: 60px;
+        input{ 
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid $blueLight;
+            text-align: center;
+        } 
+    }
+}  

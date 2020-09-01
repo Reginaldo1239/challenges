@@ -6,3 +6,8 @@ export const  saveData=(name,value)=>{
 export const readData = (name)=>{
    return localStorage.getItem(name);
 }
+export const removeData = (name)=>{
+
+   localStorage.removeItem(name);
+
+}

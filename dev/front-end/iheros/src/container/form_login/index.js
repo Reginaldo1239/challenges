@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import { useHistory } from "react-router-dom";
 
 import Label from '../../components/label';
@@ -15,7 +15,9 @@ export default function FormLogin(props){
     const [nameError,setNameError]  =useState('');
     //passwordError é usando para passar mensagens de erros enviadas do backend end e no front verifica se o campo tem algum valor
     const [passwordError,setPasswordError] = useState('');
-
+    useEffect(()=>{
+    console.log(props)
+    })
     const sendForm= async ()=>{
        
         if(validarForm()){
@@ -27,12 +29,14 @@ export default function FormLogin(props){
           try{ 
             let loginUser = await post(endPoint,body);
             let data;
-            if(loginUser.status==200){
+            console.log(loginUser)
+            if(loginUser.status===200){
                  data = await loginUser.data;
-                saveData('token',data.token);
-                saveData('id_usuario',data.id_usuario);
-                saveData('nome',data.nome)
-                history.push('/hero');
+              await  saveData('token',data.token);
+             await   saveData('id_usuario',data.id_usuario);
+             await   saveData('nome',data.nome);
+                 history.push('/hero')
+                
             }else if(loginUser.status==404){
                 data = await loginUser.data;
                 setPasswordError(data.msg)

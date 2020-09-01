@@ -9,7 +9,7 @@ export default function ItemListHero(props){
         props.deletehero(id_hero)
     }
     return (
-        <div className="component_item_list_hero">
+        <div className="component_item_list_hero" key={id_hero}>
 
 
    <div className="item_desktop"> 
