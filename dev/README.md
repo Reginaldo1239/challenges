@@ -1,6 +1,6 @@
 <h2>I heros</h2>
 <p>para rodar o projeto</p>
-<p>git clone https://github.com/Reginaldo1239/challenges.git</p>
+<span>git clone https://github.com/Reginaldo1239/challenges.git</span>
 <p>front-end na pasta dev/front-end/iheros execute o comando npm install e apos instalar as depedencias , npm start</p>
 <p>backend na pasta dev/backend npm install para instalar as depedencias e  node app.js <p>
 <p>para executar os testes no backend va para a pasta  dev/backend execute npm run test, para rodar os testes de integração é necessario que você já tenha executado node app.js e o backend tem que estar online  <p>
@@ -33,6 +33,7 @@
 </div>
 
 <div>
+  <h2>selecionar heroi</h2>
   <p>como um dos requisitos no momento de selecionar o heroi é que tinha que ser  mais proximo, adicionei a opcao de enviar o endereço do heroi e no backend  troquei o endereço por latitude e longitude usando a api do google geocoding, e no momento de selecionar o heroi uso uma query para selecionar o heroi pela classe  e o mais proximo da localidade do mostro, para usar api do google é necessario uma key que vou deixar ativa temporariamente para facilitar a execucao do projeto. caso você queira usar uma chave propia basta atualizar a variavel KEY_GOOGLE no backend/.env </p>
     <h2>validações backend</h2>
       <span>As validações são feitas nos arquivos de middlewares dos valores que são enviados do front-end; </span>
