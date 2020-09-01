@@ -5,7 +5,7 @@
 <p>backend na pasta dev/backend npm install para instalar as depedencias e  node app.js <p>
 <p>para executar os testes no backend, na pasta  dev/backend execute npm run test <p>
 <div>
-<h4>dependecias front-end</h4>
+<h4>dependecias front-end em React </h4>
 <ul>
    <li>"@testing-library/jest-dom": "^4.2.4",</li>
   <li>  "@testing-library/react": "^9.3.2",</li>
@@ -19,7 +19,7 @@
  <li>   "react-scripts": "3.4.3"</li>
 </div>
 <div>
-    <h4>dependencias backend</h4>
+    <h4>dependencias backend NodeJs</h4>
     <ul>
     <li>"cors": "^2.8.5",</li>
   <li>"cross-fetch": "^3.0.5",</li>
@@ -33,13 +33,20 @@
 </div>
 
 <div>
-  <span>como um dos requisitos no momento de selecionar o heroi é que tinha que ser  mais proximo, adicionei a opcao de enviar o endereço do heroi e no backend  troquei o endereço por latitude e longitude usando a api do google geocoding, e no momento de selecionar o heroi uso uma query para selecionar o heroi pela classe  e o mais proximo da localidade do mostro, para usar api do google é necessario uma key que vou deixar ativa temporariamente para facilitar a execucao do projeto. caso você queira usar uma chave propia basta atualizar a variavel KEY_GOOGLE no backend/.env <span>
-<div>
-<div>
-    <h2>validações backend<h2>
-    <span>
-    
-    </span>
+  <span>como um dos requisitos no momento de selecionar o heroi é que tinha que ser  mais proximo, adicionei a opcao de enviar o endereço do heroi e no backend  troquei o endereço por latitude e longitude usando a api do google geocoding, e no momento de selecionar o heroi uso uma query para selecionar o heroi pela classe  e o mais proximo da localidade do mostro, para usar api do google é necessario uma key que vou deixar ativa temporariamente para facilitar a execucao do projeto. caso você queira usar uma chave propia basta atualizar a variavel KEY_GOOGLE no backend/.env </span>
+
+
+    <p> validações backend </p>
+    <span>As validações são feitas nos arquivos de middlewares dos valores que são enviados do front-end; </span>
+    <p>no momento de cadastrar um novo heroi,nao fiz uma verificao se ja existia um nome do heroi cadastrado antes da insersao no banco de dados, porque considerei que poderia exister herois com o mesmo nome</p>
+
+
+    <p>socket</p>
+    <span>criei uma pasta socket-client para facilitar a localização de funçoes relacionas a socket e um models/socket-client.js para manipular o banco de dados</span>
+
+
+    <h2>jwt</h2>
+    <span>jwt deixei o token com validade infinita pois em ambiente de desenvolvimento é melhor para testar, mas pode ser colocado um periodo de validade </span>
 </div>
 
    
