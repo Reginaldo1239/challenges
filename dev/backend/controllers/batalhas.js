@@ -11,6 +11,7 @@ let {page,limit} = req.query;
          res.status(200).send(listBatalhas);
      }else{
          res.status(404).send(listBatalhas);
+         
      }
    }catch(e){
        console.log(e)

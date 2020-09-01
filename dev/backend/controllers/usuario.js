@@ -39,3 +39,8 @@ exports.login= async (req,res)=>{
     }
      
   }
+
+  exports.auth = (req,res)=>{
+//como o middleware de autenticação  faz a verificação de token valido essa função apenas retorna uma resposta 
+    res.status(200).send({auth:true});
+  }

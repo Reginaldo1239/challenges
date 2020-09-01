@@ -23,9 +23,9 @@ exports.getOneHero= async (values)=>{
 exports.listHeroes = async (values)=>{
     let {id_usuario,limit,page} = values;
 
-    let query ="SELECT * FROM heroes WHERE id_usuario=? LIMIT ? OFFSET ?";
+    let query ="SELECT * FROM heroes WHERE id_usuario=? order by id_hero desc LIMIT ? OFFSET ?";
     let valuesOfQuery=[id_usuario,parseInt(limit),page*page];
-    return await db.select(query,valuesOfQuery);  
+    return await db.select(query,valuesOfQuery);   
 }
 
 exports.deleteHero = async  values =>{

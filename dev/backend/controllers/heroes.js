@@ -7,17 +7,16 @@ exports.newHero =async (req,res)=>{
     let {id_usuario} = req.headers;
     let errors = [];
     let error = {msg:''};
- /*  
+ 
    let latELng= await  geoCoding.getLatitudeELongiture({cidade:'sao paulo',bairro:'pinheiros',pais:'brasil'});
     if(latELng===false){
         errors.push({latELng:'ocorreu algumm erro ao obter as coordenadas geograficas,verifique o endereço'})
         error.msg ='ocorreu algumm erro ao obter as coordenadas geograficas,verifique o endereço';
     }
-    console.log('teasdfdd')*/
     if(errors.length===0){
-       // let {lat,lng} = latELng;
-       let lat= -23.56357870 ;
-       let lng =  -46.69160680;
+        let {lat,lng} = latELng;
+      // let lat= -23.56357870 ;
+      // let lng =  -46.69160680;
         try{
             let resultInsertNewHero =  await heroModel.newHero({id_usuario,nome,classe,lat,lng,cidade,bairro,pais});
                 resultInsertNewHero.affectedRows>0?res.status(201).send(resultInsertNewHero):res.status(503).send(CONFIG.ERROR503);
@@ -107,3 +106,4 @@ exports.deleteHero =async (req,res)=>{
             res.status(503).send(CONFIG.ERROR503);
         }   
 }
+
