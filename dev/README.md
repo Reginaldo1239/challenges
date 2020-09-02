@@ -11,7 +11,7 @@
     <p>DB_USER_PASSWORD=123456789</p>
 
 <p>front-end na pasta dev/front-end/iheros execute o comando npm install e apos instalar as depedencias , npm start</p>
-<p>backend na pasta dev/backend npm install para instalar as depedencias e  node app.js <p>
+<p>backend na pasta dev/backend npm install para instalar as depedencias e rode o comando node app.js <p>
 <p>para executar os testes no backend vá para a pasta  dev/backend execute npm run test, para rodar os testes de integração é necessario que você já tenha executado node app.js e o backend tem que estar online  <p>
 <h2>dados para logar no sistema</h2>
 <p>nome:zrp</p>
