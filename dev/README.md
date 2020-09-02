@@ -5,7 +5,7 @@
   <p>por padrao  o backend usa um serviço de banco de dados oferecido pela db4free.net,mas as vezes serviço fica offline,se acontecer recomendo importar o backend/iheros.sql para testar </p>
   <p>você vai precisar do mysql</p>
   <p> importar o arquivo iheros.sql , e anterar as variaveis  de acesso ao banco de dados no arquivo backend/.env </p>
-  <h2>variaveis<h2>
+  <h2>variaveis</h2>
     <p> HOST_DB=db4free.net</p>
     <p> DB_NAME=ihero123</p>
     <p>DB_USER_NAME=reginaldo123</p>
