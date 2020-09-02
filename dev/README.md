@@ -2,10 +2,23 @@
 <p>Projeto desenvolvido com node js,react,mysql</p>
 <p>para rodar o projeto</p>
 <div><span>git clone https://github.com/Reginaldo1239/challenges.git</span></div>
+  <p>por padrao  o backend usa um serviço de banco de dados oferecido pela db4free.net,mas as vezes serviço fica offline,se acontecer recomendo importar o backend/iheros.sql para testar </p>
+  <p>você vai precisar do mysql</p>
+  <p> importar o arquivo iheros.sql , e anterar as variaveis  de acesso ao banco de dados no arquivo backend/.env </p>
+  <h2>variaveis<h2>
+    <p> HOST_DB=db4free.net</p>
+    <p> DB_NAME=ihero123</p>
+    <p>DB_USER_NAME=reginaldo123</p>
+    <p>DB_USER_PASSWORD=123456789</p>
+
 <p>front-end na pasta dev/front-end/iheros execute o comando npm install e apos instalar as depedencias , npm start</p>
 <p>backend na pasta dev/backend npm install para instalar as depedencias e  node app.js <p>
-<p>para executar os testes no backend va para a pasta  dev/backend execute npm run test, para rodar os testes de integração é necessario que você já tenha executado node app.js e o backend tem que estar online  <p>
+<p>para executar os testes no backend vá para a pasta  dev/backend execute npm run test, para rodar os testes de integração é necessario que você já tenha executado node app.js e o backend tem que estar online  <p>
+<h2>dados para logar no sistema</h2>
+<p>nome:zrp</p>
+<p>senha:123456</p>
 <div>
+ 
 <h4>dependecias front-end em React </h4>
 <ul>
    <li>"@testing-library/jest-dom": "^4.2.4",</li>
