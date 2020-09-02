@@ -1,4 +1,6 @@
+import fetch from 'cross-fetch';
 import {readData} from '../util/local_storage';
+
 const BASEURL = process.env.REACT_APP_BASEURL;
 
 export const post=  (endPoint,body)=>{
