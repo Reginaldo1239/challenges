@@ -1,6 +1,29 @@
 <h2>I heros</h2>
 <p>Projeto desenvolvido com node js,react,mysql</p>
-<p>para rodar o projeto</p>
+  
+<div>
+<h2></h2>
+  <h2>selecionar heroi</h2>
+  <p>como um dos requisitos no momento de selecionar o heroi é que tinha que ser  mais proximo, adicionei a opcao de enviar o endereço do heroi e no backend  troquei o endereço por latitude e longitude usando a api do google geocoding, e no momento de selecionar o heroi uso uma query para selecionar o heroi pela classe  e o mais proximo da localidade do mostro, para usar api do google é necessario uma key que vou deixar ativa temporariamente para facilitar a execucao do projeto. caso você queira usar uma chave propia basta atualizar a variavel KEY_GOOGLE no backend/.env </p>
+    <h2>validações backend</h2>
+      <span>As validações são feitas nos arquivos de middlewares dos valores que são enviados do front-end; </span>
+    <p>no momento de cadastrar um novo heroi,nao fiz uma verificao se ja existia um nome do heroi cadastrado antes da insersao no banco de dados, porque considerei que poderia exister herois com o mesmo nome</p>
+    <h2>socket</h2>
+       <p>criei uma pasta socket-client para facilitar a localização de funçoes relacionas a socket e um models/socket-client.js para manipular o banco de dados</p>
+        <h2>jwt</h2>
+            <p>jwt deixei o token com validade infinita pois em ambiente de desenvolvimento é melhor para testar, mas pode ser colocado um periodo de validade </p>
+            <p>para autenticar as rota privadas usei um middleware que é chamado no backend/app.js, com uma unica chamada serve para validar qualquer solicitação a rotas privadas </p>
+            <p>no arquivo servico/geoCoding.js tem a função que troca um endereco por latitude e longitude </p>
+            <p>em routers separei as rotas privadas e publicas</p>
+            <h2></h2>
+    <p>no front-end dividi a aplicação em componentes,containers,paginas ,nos container deixei as partes da aplicação que envolvia alguma logica complexa. no arquivo src/main.scss deixe algumas classes e variaveis em que o uso é comum de varios componentes</p>
+    <p> no arquivo src/api/index.js tem as funçoes get,post,put/delete usandas para fazer solicitações ao backend</p>
+    
+</div>
+
+
+
+<h2>para rodar o projeto</h2>
 <div><span>git clone https://github.com/Reginaldo1239/challenges.git</span></div>
   <p>por padrao  o backend usa um serviço de banco de dados oferecido pela db4free.net,mas as vezes serviço fica offline,se acontecer recomendo importar o backend/iheros.sql para testar </p>
   <p>você vai precisar do mysql</p>
@@ -45,22 +68,9 @@
     </ul>
 </div>
 
-<div>
-  <h2>selecionar heroi</h2>
-  <p>como um dos requisitos no momento de selecionar o heroi é que tinha que ser  mais proximo, adicionei a opcao de enviar o endereço do heroi e no backend  troquei o endereço por latitude e longitude usando a api do google geocoding, e no momento de selecionar o heroi uso uma query para selecionar o heroi pela classe  e o mais proximo da localidade do mostro, para usar api do google é necessario uma key que vou deixar ativa temporariamente para facilitar a execucao do projeto. caso você queira usar uma chave propia basta atualizar a variavel KEY_GOOGLE no backend/.env </p>
-    <h2>validações backend</h2>
-      <span>As validações são feitas nos arquivos de middlewares dos valores que são enviados do front-end; </span>
-    <p>no momento de cadastrar um novo heroi,nao fiz uma verificao se ja existia um nome do heroi cadastrado antes da insersao no banco de dados, porque considerei que poderia exister herois com o mesmo nome</p>
-    <h2>socket</h2>
-       <p>criei uma pasta socket-client para facilitar a localização de funçoes relacionas a socket e um models/socket-client.js para manipular o banco de dados</p>
-        <h2>jwt</h2>
-            <p>jwt deixei o token com validade infinita pois em ambiente de desenvolvimento é melhor para testar, mas pode ser colocado um periodo de validade </p>
-</div>
 
   
 
 
 
 
-
-   

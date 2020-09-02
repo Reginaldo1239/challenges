@@ -1,44 +1,76 @@
-# Challenges
+<h2>I heros</h2>
+<p>Projeto desenvolvido com node js,react,mysql</p>
+  
+<div>
+<h2></h2>
+  <h2>selecionar heroi</h2>
+  <p>como um dos requisitos no momento de selecionar o heroi é que tinha que ser  mais proximo, adicionei a opcao de enviar o endereço do heroi e no backend  troquei o endereço por latitude e longitude usando a api do google geocoding, e no momento de selecionar o heroi uso uma query para selecionar o heroi pela classe  e o mais proximo da localidade do mostro, para usar api do google é necessario uma key que vou deixar ativa temporariamente para facilitar a execucao do projeto. caso você queira usar uma chave propia basta atualizar a variavel KEY_GOOGLE no backend/.env </p>
+    <h2>validações backend</h2>
+      <span>As validações são feitas nos arquivos de middlewares dos valores que são enviados do front-end; </span>
+    <p>no momento de cadastrar um novo heroi,nao fiz uma verificao se ja existia um nome do heroi cadastrado antes da insersao no banco de dados, porque considerei que poderia exister herois com o mesmo nome</p>
+    <h2>socket</h2>
+       <p>criei uma pasta socket-client para facilitar a localização de funçoes relacionas a socket e um models/socket-client.js para manipular o banco de dados</p>
+        <h2>jwt</h2>
+            <p>jwt deixei o token com validade infinita pois em ambiente de desenvolvimento é melhor para testar, mas pode ser colocado um periodo de validade </p>
+            <p>para autenticar as rota privadas usei um middleware que é chamado no backend/app.js, com uma unica chamada serve para validar qualquer solicitação a rotas privadas </p>
+            <p>no arquivo servico/geoCoding.js tem a função que troca um endereco por latitude e longitude </p>
+            <p>em routers separei as rotas privadas e publicas</p>
+            <h2></h2>
+    <p>no front-end dividi a aplicação em componentes,containers,paginas ,nos container deixei as partes da aplicação que envolvia alguma logica complexa. no arquivo src/main.scss deixe algumas classes e variaveis em que o uso é comum de varios componentes</p>
+    <p> no arquivo src/api/index.js tem as funçoes get,post,put/delete usandas para fazer solicitações ao backend</p>
+    
+</div>
 
-Com o objetivo de se tornar um funcionário ZRP você precisa provar para o nosso timme, um grupo de profissionais extremamente competentes e habilidosos, que você será capaz de analisar, prever e desenvolver as tarefas que te forem designadas.
 
-Para cada um dos possíveis cargos que você for se candidatar haverá desafios dos mais diversos níveis, podendo estes serem _fáceis_, _normais_ ou _difíceis_. Você pode submeter o teste que achar que mais se encaixa com o seu perfil.
 
-## Como submeter o seu projeto
+<h2>para rodar o projeto</h2>
+<div><span>git clone https://github.com/Reginaldo1239/challenges.git</span></div>
+  <p>por padrao  o backend usa um serviço de banco de dados oferecido pela db4free.net,mas as vezes serviço fica offline,se acontecer recomendo importar o backend/iheros.sql para testar </p>
+  <p>você vai precisar do mysql</p>
+  <p> importar o arquivo iheros.sql , e anterar as variaveis  de acesso ao banco de dados no arquivo backend/.env </p>
+    <p> HOST_DB=db4free.net</p>
+    <p> DB_NAME=ihero123</p>
+    <p>DB_USER_NAME=reginaldo123</p>
+    <p>DB_USER_PASSWORD=123456789</p>
 
-Cada área e cada projeto tem a sua própria regra quanto a submissão do desafio. Leia atentamente as regras e instruções antes de enviar seu projeto.
+<p>front-end na pasta dev/front-end/iheros execute o comando npm install e apos instalar as depedencias , npm start</p>
+<p>backend na pasta dev/backend npm install para instalar as depedencias e rode o comando node app.js <p>
+<p>para executar os testes no backend vá para a pasta  dev/backend execute npm run test, para rodar os testes de integração é necessario que você já tenha executado node app.js e o backend tem que estar online  <p>
+<h2>dados para logar no sistema</h2>
+<p>nome:zrp</p>
+<p>senha:123456</p>
+<div>
+ 
+<h4>dependecias front-end em React </h4>
+<ul>
+   <li>"@testing-library/jest-dom": "^4.2.4",</li>
+  <li>  "@testing-library/react": "^9.3.2",</li>
+ <li>  "@testing-library/user-event": "^7.1.2",</li>
+   <li> "cross-fetch": "^3.0.5",</li>
+   <li> "dotenv": "^8.2.0",</li>
+   <li> "node-sass": "^4.14.1",</li>
+ <li>   "react": "^16.13.1",</li>
+ <li>   "react-dom": "^16.13.1",</li>
+ <li>   "react-router-dom": "^5.2.0",</li>
+ <li>   "react-scripts": "3.4.3"</li>
+</div>
+<div>
+    <h4>dependencias backend NodeJs</h4>
+    <ul>
+    <li>"cors": "^2.8.5",</li>
+  <li>"cross-fetch": "^3.0.5",</li>
+   <li>"dotenv": "^8.2.0",</li>
+   <li>"express": "^4.17.1",</li>
+  <li>"faker": "^5.1.0",</li>
+  <li>"jsonwebtoken": "^8.5.1",</li>
+  <li>"mysql": "^2.18.1",</li>
+  <li>socket.io": "^2.3.0"</li>
+    </ul>
+</div>
 
-> Dúvidas? Envie um email para [jobs@zrp.com.br](jobs@zrp.com.br).
 
-## Como o processo seletivo da ZRP funciona
+  
 
-### Primeira Fase - Seleção
 
-Na primeira fase você será avaliado por um dos sócios da ZRP. O objetivo dessa avaliação é ver se você possui aderência à cultura da empresa. Nós prezamos por pessoas prestativas, pró-ativas, comunicativas e interessadas em aprender. Suas core skills serão os seus diferenciais aqui.
 
-### Segunda Fase - Desafio
 
-Se você passar na primeira fase você deverá escolher um desafio que você deseja enviar e nos dar uma previsão de quanto tempo você demorará para enviar aquele desafio.
-Não há tempo limite para a submissão, porém você será avaliado pela sua capacidade de prever seu tempo de entrega.
-
-Depois desse envio nosso time irá avaliar se:
-
-- Você teve uma boa previsão do tempo que você levaria para resolver o problema
-- Resolveu com precisão o problema apresentado
-- Cumpriu com os requisitos e critérios de avaliação daquele desafio
-
-### Terceira Fase - Feedback
-
-Para aqueles que submeteram o desafio da segunda fase haverá uma revisão do desafio pelo nosso time e te chamaremos para um breve call de feedback dizendo se você foi contratado ou não e o porque da decisão.
-
-### Escolha o seu caminho
-
-Para qual vaga você está se candidatando?
-
-- [Desenvolvedor](./dev)
-- [Devops](./devops)
-- [Designer](./design)
-- [PO](./po)
-- [QA](./qa)
-- [Comercial](./comercial)
-- [RH](./rh)
