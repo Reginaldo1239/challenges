@@ -17,7 +17,7 @@ return new Promise( async (resolver,reject)=>{
       
 
 })
-} 
+}  
   
  
 export const get = async (endPoint) =>{
