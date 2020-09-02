@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01-Set-2020 às 11:57
+-- Tempo de geração: 02-Set-2020 às 04:54
 -- Versão do servidor: 10.4.13-MariaDB
 -- versão do PHP: 7.2.31
 
@@ -710,7 +710,82 @@ INSERT INTO `batalhas` (`id_batalha`, `id_hero`, `moster_danger_level`, `moster_
 (667, 549, 'Tiger', 'Dawnmouth', '9999.999999', '2020-09-01 06:55:14'),
 (668, 551, 'Dragon', 'Helltree', '9999.999999', '2020-09-01 06:56:22'),
 (669, 549, 'Tiger', 'Helltree', '1286.821175', '2020-09-01 06:56:52'),
-(670, 549, 'Tiger', 'The Slender Rot Lion', '9999.999999', '2020-09-01 06:57:22');
+(670, 549, 'Tiger', 'The Slender Rot Lion', '9999.999999', '2020-09-01 06:57:22'),
+(671, 549, 'Tiger', 'The Lone Butcher Dragon', '9999.999999', '2020-09-01 06:57:52'),
+(672, 547, 'God', 'The Grotesque Abomination', '2312.977790', '2020-09-01 06:58:22'),
+(673, 551, 'Dragon', 'The Raging Night Wolf', '2326.231762', '2020-09-01 06:58:52'),
+(674, 550, 'Wolf', 'The Giant Sun Swine', '2332.440962', '2020-09-01 06:59:22'),
+(675, 549, 'Tiger', 'The Infamous Weirdo', '9554.794570', '2020-09-01 06:59:52'),
+(676, 550, 'Wolf', 'Dawnmouth', '2325.510918', '2020-09-01 07:00:22'),
+(677, 547, 'God', 'Helltree', '1018.950384', '2020-09-01 07:00:52'),
+(678, 550, 'Wolf', 'Dawnmouth', '859.471524', '2020-09-01 07:01:22'),
+(679, 547, 'God', 'Doommorph', '1051.208225', '2020-09-01 07:01:52'),
+(680, 547, 'God', 'Grimefoot', '9548.357351', '2020-09-01 07:02:22'),
+(681, 549, 'Tiger', 'The White Eyes', '133.573354', '2020-09-01 07:02:52'),
+(682, 553, 'Dragon', 'The Grotesque Abomination', '9570.440542', '2020-09-01 07:03:22'),
+(683, 550, 'Wolf', 'Dawnmouth', '9999.999999', '2020-09-01 07:03:52'),
+(684, 550, 'Wolf', 'Grimefoot', '391.099158', '2020-09-01 07:04:22'),
+(685, 553, 'Dragon', 'Horrortooth', '9999.999999', '2020-09-01 07:04:52'),
+(686, 553, 'Dragon', 'Doommorph', '9999.999999', '2020-09-01 07:05:22');
+INSERT INTO `batalhas` (`id_batalha`, `id_hero`, `moster_danger_level`, `moster_name`, `distance_of_moster`, `criado`) VALUES
+(687, 553, 'Dragon', 'The Lone Butcher Dragon', '9567.972214', '2020-09-01 07:05:52'),
+(688, 547, 'God', 'Blazeteeth', '9558.404477', '2020-09-01 07:06:22'),
+(689, 547, 'God', 'The Jade Army Jackal', '9999.999999', '2020-09-01 07:06:52'),
+(690, 556, 'Dragon', 'Helltree', '79.289987', '2020-09-01 07:07:22'),
+(691, 547, 'God', 'The Raging Night Wolf', '9999.999999', '2020-09-01 07:07:52'),
+(692, 549, 'Tiger', 'Dawnmouth', '2309.272950', '2020-09-01 07:08:22'),
+(693, 550, 'Wolf', 'Grimefoot', '2307.898017', '2020-09-01 07:08:52'),
+(694, 556, 'Dragon', 'The Wretched Pest', '9999.999999', '2020-09-01 07:09:22'),
+(695, 547, 'God', 'The Slender Rot Lion', '9999.999999', '2020-09-01 07:09:52'),
+(696, 560, 'Dragon', 'The Giant Sun Swine', '9999.999999', '2020-09-01 07:10:22'),
+(697, 547, 'God', 'The Wretched Pest', '9562.421086', '2020-09-01 07:10:52'),
+(698, 547, 'God', 'The Lone Butcher Dragon', '9999.999999', '2020-09-01 07:11:22'),
+(699, 563, 'Dragon', 'Grimefoot', '9999.999999', '2020-09-01 07:11:52'),
+(700, 563, 'Dragon', 'Dawnmouth', '9999.999999', '2020-09-01 07:12:22'),
+(701, 563, 'Dragon', 'Doommorph', '34.980677', '2020-09-01 07:12:52'),
+(702, 549, 'Tiger', 'The Ugly Mongrel', '9999.999999', '2020-09-01 07:13:22'),
+(703, 566, 'Dragon', 'Grimefoot', '1068.404770', '2020-09-01 07:13:52'),
+(704, 568, 'Wolf', 'Blazeteeth', '2306.412401', '2020-09-01 07:14:22'),
+(705, 569, 'Dragon', 'The Wretched Pest', '9999.999999', '2020-09-01 07:14:52'),
+(706, 569, 'Dragon', 'The Jade Army Jackal', '9999.999999', '2020-09-01 07:15:22'),
+(707, 569, 'Dragon', 'The Slender Rot Lion', '2321.811723', '2020-09-01 07:15:52'),
+(708, 547, 'God', 'The Lone Butcher Dragon', '9547.060040', '2020-09-01 07:16:22'),
+(709, 549, 'Tiger', 'The Ugly Mongrel', '862.078067', '2020-09-01 07:16:52'),
+(710, 549, 'Tiger', 'The Ugly Mongrel', '2331.287016', '2020-09-01 07:17:22'),
+(711, 549, 'Tiger', 'Blazeteeth', '9999.999999', '2020-09-01 07:17:52'),
+(712, 572, 'Dragon', 'Doommorph', '2322.982154', '2020-09-01 07:18:22'),
+(713, 549, 'Tiger', 'The Ugly Mongrel', '810.945418', '2020-09-01 07:18:52'),
+(714, 578, 'Dragon', 'Grimefoot', '2300.056572', '2020-09-01 07:19:22'),
+(715, 577, 'Wolf', 'Doommorph', '2331.935691', '2020-09-01 07:19:52'),
+(716, 549, 'Tiger', 'The Supreme Night Bear', '9548.153619', '2020-09-01 07:20:22'),
+(717, 578, 'Dragon', 'Helltree', '2333.456780', '2020-09-01 07:20:52'),
+(718, 547, 'God', 'The Wretched Pest', '9999.999999', '2020-09-01 07:21:22'),
+(719, 547, 'God', 'The Ugly Mongrel', '9571.265331', '2020-09-01 07:21:52'),
+(720, 549, 'Tiger', 'Spiritmouth', '684.478445', '2020-09-01 07:22:22'),
+(721, 580, 'Wolf', 'The Jade Army Jackal', '9999.999999', '2020-09-01 07:22:52'),
+(722, 547, 'God', 'The Infamous Weirdo', '9999.999999', '2020-09-01 07:23:22'),
+(723, 547, 'God', 'The Dismal Guardian', '9999.999999', '2020-09-01 07:23:52'),
+(724, 549, 'Tiger', 'The Infamous Weirdo', '2308.883099', '2020-09-01 07:24:22'),
+(725, 580, 'Wolf', 'Helltree', '9999.999999', '2020-09-01 07:24:52'),
+(726, 587, 'Dragon', 'Blazeteeth', '1424.151431', '2020-09-01 07:25:22'),
+(727, 589, 'Wolf', 'Dreamseeker', '9555.247501', '2020-09-01 07:25:52'),
+(728, 549, 'Tiger', 'Horrortooth', '9999.999999', '2020-09-01 07:26:22'),
+(729, 589, 'Wolf', 'Spiritmouth', '189.447876', '2020-09-01 07:26:52'),
+(730, 547, 'God', 'The Wretched Pest', '9999.999999', '2020-09-01 07:27:22'),
+(731, 547, 'God', 'The Ugly Mongrel', '9999.999999', '2020-09-01 07:27:52'),
+(732, 592, 'Wolf', 'Horrortooth', '9556.581400', '2020-09-01 07:28:22'),
+(733, 593, 'Dragon', 'Horrortooth', '9999.999999', '2020-09-01 07:28:52'),
+(734, 549, 'Tiger', 'The Infamous Weirdo', '787.481646', '2020-09-01 07:29:22'),
+(735, 598, 'Wolf', 'Blazeteeth', '9999.999999', '2020-09-01 07:29:52'),
+(736, 599, 'Dragon', 'The Jade Army Jackal', '9561.087892', '2020-09-01 07:30:22'),
+(737, 602, 'Dragon', 'Doommorph', '9999.999999', '2020-09-01 07:30:52'),
+(738, 605, 'Dragon', 'Horrortooth', '2334.051148', '2020-09-01 07:31:36'),
+(739, 549, 'Tiger', 'Helltree', '342.590090', '2020-09-01 07:32:06'),
+(740, 605, 'Dragon', 'The Ugly Mongrel', '9570.116221', '2020-09-01 07:32:36'),
+(741, 604, 'Wolf', 'The Lone Butcher Dragon', '9999.999999', '2020-09-01 07:33:06'),
+(742, 547, 'God', 'Helltree', '9999.999999', '2020-09-01 07:33:36'),
+(743, 608, 'Dragon', 'Horrortooth', '9999.999999', '2020-09-01 07:34:06'),
+(744, 607, 'Wolf', 'The Ugly Mongrel', '9999.999999', '2020-09-01 07:34:36');
 
 -- --------------------------------------------------------
 
@@ -725,36 +800,78 @@ CREATE TABLE `heroes` (
   `classe` varchar(1) NOT NULL,
   `lat` decimal(10,8) NOT NULL,
   `lng` decimal(11,8) NOT NULL,
-  `atualizado` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `criado` datetime NOT NULL DEFAULT current_timestamp(),
   `cidade` varchar(30) DEFAULT NULL,
   `bairro` varchar(30) DEFAULT NULL,
-  `pais` varchar(30) DEFAULT NULL
+  `pais` varchar(30) DEFAULT NULL,
+  `atualizado` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `criado` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `heroes`
 --
 
-INSERT INTO `heroes` (`id_hero`, `id_usuario`, `nome`, `classe`, `lat`, `lng`, `atualizado`, `criado`, `cidade`, `bairro`, `pais`) VALUES
-(79, 0, '', 'A', '-23.56357870', '-46.69160680', '2020-08-29 05:20:53', '2020-08-27 14:51:15', 'sao paulo', 'pinheiros', 'brasil'),
-(81, 0, '', 'A', '-23.56357870', '-46.69160680', '2020-08-29 05:20:53', '2020-08-27 14:51:43', 'sao paulo', 'pinheiros', 'brasil'),
-(83, 0, '', 'A', '-23.56357870', '-46.69160680', '2020-08-29 05:20:53', '2020-08-27 14:54:36', 'sao paulo', 'pinheiros', 'brasil'),
-(85, 0, '', 'A', '-23.56357870', '-46.69160680', '2020-08-29 05:20:53', '2020-08-27 14:55:45', 'sao paulo', 'pinheiros', 'brasil'),
-(87, 0, '', 'A', '-23.56357870', '-46.69160680', '2020-08-29 05:20:53', '2020-08-27 14:56:35', 'sao paulo', 'pinheiros', 'brasil'),
-(89, 0, '', 'A', '-23.56357870', '-46.69160680', '2020-08-29 05:20:53', '2020-08-27 14:57:06', 'sao paulo', 'pinheiros', 'brasil'),
-(92, 0, '', 'A', '-23.56357870', '-46.69160680', '2020-08-29 05:20:53', '2020-08-27 15:00:20', 'sao paulo', 'pinheiros', 'brasil'),
-(94, 0, '', 'A', '-23.56357870', '-46.69160680', '2020-08-29 05:20:53', '2020-08-27 15:00:52', 'sao paulo', 'pinheiros', 'brasil'),
-(96, 0, '', 'A', '-23.56357870', '-46.69160680', '2020-08-29 05:20:53', '2020-08-27 15:01:21', 'sao paulo', 'pinheiros', 'brasil'),
-(99, 0, '', 'A', '-23.56357870', '-46.69160680', '2020-08-29 05:20:53', '2020-08-27 15:07:20', 'sao paulo', 'pinheiros', 'brasil'),
-(101, 0, '', 'A', '-23.56357870', '-46.69160680', '2020-08-29 05:20:53', '2020-08-27 15:07:53', 'sao paulo', 'pinheiros', 'brasil'),
-(103, 0, '', 'A', '-23.56357870', '-46.69160680', '2020-08-29 05:20:53', '2020-08-27 15:09:22', 'sao paulo', 'pinheiros', 'brasil'),
-(105, 0, '', 'A', '-23.56357870', '-46.69160680', '2020-08-29 05:20:53', '2020-08-27 15:11:18', 'sao paulo', 'pinheiros', 'brasil'),
-(547, 2, 'zrp', 'S', '-23.56357870', '-46.69160680', '2020-09-01 04:44:29', '2020-09-01 04:44:29', 'sao paulo', 'pinheiros', 'brasil'),
-(548, 2, 'zrp-A', 'A', '-23.56357870', '-46.69160680', '2020-09-01 04:45:25', '2020-09-01 04:45:25', 'sao paulo', 'santo amaro', 'brasil'),
-(549, 2, 'zrp-b', 'B', '-23.56357870', '-46.69160680', '2020-09-01 04:45:50', '2020-09-01 04:45:50', 'sao paulo', 'grajau', 'brasil'),
-(550, 2, 'zrp-c', 'C', '-23.56357870', '-46.69160680', '2020-09-01 04:46:24', '2020-09-01 04:46:24', 'sao paulo', 'sao luiz', 'brasil'),
-(551, 2, 'front-end-A', 'A', '-23.56357870', '-46.69160680', '2020-09-01 05:10:38', '2020-09-01 05:10:38', 'são paulo', 'jabaquara', 'Brasil');
+INSERT INTO `heroes` (`id_hero`, `id_usuario`, `nome`, `classe`, `lat`, `lng`, `cidade`, `bairro`, `pais`, `atualizado`, `criado`) VALUES
+(79, 0, '', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-08-29 05:20:53', '2020-08-27 14:51:15'),
+(81, 0, '', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-08-29 05:20:53', '2020-08-27 14:51:43'),
+(83, 0, '', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-08-29 05:20:53', '2020-08-27 14:54:36'),
+(85, 0, '', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-08-29 05:20:53', '2020-08-27 14:55:45'),
+(87, 0, '', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-08-29 05:20:53', '2020-08-27 14:56:35'),
+(89, 0, '', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-08-29 05:20:53', '2020-08-27 14:57:06'),
+(92, 0, '', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-08-29 05:20:53', '2020-08-27 15:00:20'),
+(94, 0, '', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-08-29 05:20:53', '2020-08-27 15:00:52'),
+(96, 0, '', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-08-29 05:20:53', '2020-08-27 15:01:21'),
+(99, 0, '', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-08-29 05:20:53', '2020-08-27 15:07:20'),
+(101, 0, '', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-08-29 05:20:53', '2020-08-27 15:07:53'),
+(103, 0, '', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-08-29 05:20:53', '2020-08-27 15:09:22'),
+(105, 0, '', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-08-29 05:20:53', '2020-08-27 15:11:18'),
+(547, 2, 'zrp', 'S', '-23.56357870', '-46.69160680', 'sao paulo', 'pinheiros', 'brasil', '2020-09-01 04:44:29', '2020-09-01 04:44:29'),
+(548, 2, 'zrp-A', 'A', '-23.56357870', '-46.69160680', 'sao paulo', 'santo amaro', 'brasil', '2020-09-01 04:45:25', '2020-09-01 04:45:25'),
+(549, 2, 'zrp-b', 'B', '-23.56357870', '-46.69160680', 'sao paulo', 'grajau', 'brasil', '2020-09-01 04:45:50', '2020-09-01 04:45:50'),
+(550, 2, 'zrp-c', 'C', '-23.56357870', '-46.69160680', 'sao paulo', 'sao luiz', 'brasil', '2020-09-01 04:46:24', '2020-09-01 04:46:24'),
+(551, 2, 'front-end-A', 'A', '-23.56357870', '-46.69160680', 'são paulo', 'jabaquara', 'Brasil', '2020-09-01 05:10:38', '2020-09-01 05:10:38'),
+(553, 1, 'Harvey Brekke', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:00:48', '2020-09-01 07:00:48'),
+(556, 1, 'Ronnie Schinner', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:07:15', '2020-09-01 07:07:15'),
+(557, 1, 'Kendall', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:07:16', '2020-09-01 07:07:16'),
+(559, 1, 'Charles', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:09:55', '2020-09-01 07:09:54'),
+(560, 1, 'Mrs. Stacey Rodriguez', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:09:55', '2020-09-01 07:09:55'),
+(562, 1, 'Carlos', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:11:39', '2020-09-01 07:11:39'),
+(563, 1, 'Kelley Dickinson', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:11:39', '2020-09-01 07:11:39'),
+(565, 1, 'Carmel', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:13:23', '2020-09-01 07:13:23'),
+(566, 1, 'Ms. Brent Koepp', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:13:23', '2020-09-01 07:13:23'),
+(568, 1, 'Reinhold', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:14:11', '2020-09-01 07:14:10'),
+(569, 1, 'Miss Rhonda Marvin', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:14:11', '2020-09-01 07:14:11'),
+(571, 1, 'Heath', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:17:31', '2020-09-01 07:17:31'),
+(572, 1, 'Bernadette Kris', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:17:31', '2020-09-01 07:17:31'),
+(573, 2, 'newName1598955511167', '', '0.00000000', '-46.69160680', NULL, NULL, NULL, '2020-09-01 07:18:31', '2020-09-01 07:18:31'),
+(574, 1, 'Neoma', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:18:33', '2020-09-01 07:18:33'),
+(575, 1, 'Genevieve Gerlach', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:18:33', '2020-09-01 07:18:33'),
+(577, 1, 'Austen', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:19:22', '2020-09-01 07:19:22'),
+(578, 1, 'Jean Olson', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:19:22', '2020-09-01 07:19:22'),
+(580, 2, 'Jerrell', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:23:57', '2020-09-01 07:21:40'),
+(581, 2, 'Roberto Mertz', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:21:40', '2020-09-01 07:21:40'),
+(583, 2, 'Candice Blanda', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:23:56', '2020-09-01 07:23:56'),
+(584, 2, 'Martin Christiansen', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:23:57', '2020-09-01 07:23:57'),
+(586, 2, 'Nathen', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:25:07', '2020-09-01 07:25:06'),
+(587, 2, 'Carolyn Marvin', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:25:07', '2020-09-01 07:25:07'),
+(589, 2, 'Modesta', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:25:43', '2020-09-01 07:25:43'),
+(590, 2, 'Dixie Kessler', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:25:43', '2020-09-01 07:25:43'),
+(592, 2, 'Manuela', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:28:06', '2020-09-01 07:28:05'),
+(593, 2, 'Rudy Hodkiewicz', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:28:05', '2020-09-01 07:28:05'),
+(595, 2, 'Adam', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:29:01', '2020-09-01 07:29:00'),
+(596, 2, 'Ella Kemmer DDS', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:29:01', '2020-09-01 07:29:01'),
+(598, 2, 'Hazle', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:29:37', '2020-09-01 07:29:36'),
+(599, 2, 'Steven Hansen', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:29:37', '2020-09-01 07:29:37'),
+(601, 2, 'Kayley', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:30:32', '2020-09-01 07:30:31'),
+(602, 2, 'Antoinette Senger', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:30:31', '2020-09-01 07:30:31'),
+(604, 2, 'Geovanny', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:31:33', '2020-09-01 07:31:32'),
+(605, 2, 'Krystal Howell', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:31:33', '2020-09-01 07:31:33'),
+(607, 2, 'Candace', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:33:11', '2020-09-01 07:33:10'),
+(608, 2, 'Lynn Cruickshank', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:33:11', '2020-09-01 07:33:11'),
+(610, 2, 'Serenity', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:34:57', '2020-09-01 07:34:56'),
+(611, 2, 'Mrs. Bridget Harris', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:34:56', '2020-09-01 07:34:56'),
+(614, 2, 'Brandi', 'C', '-23.56357870', '-46.69160680', 'Juàzeiro', 'Santo Antonio', 'brasil', '2020-09-01 07:36:13', '2020-09-01 07:36:12'),
+(615, 2, 'Leticia Gutkowski', 'A', '-23.56357870', '-46.69160680', 'Sao paulo', 'Pinheiros', 'brasil', '2020-09-01 07:36:12', '2020-09-01 07:36:12');
 
 -- --------------------------------------------------------
 
@@ -766,8 +883,8 @@ CREATE TABLE `usuarios` (
   `id_usuario` int(11) NOT NULL,
   `nome` varchar(30) NOT NULL,
   `senha` varchar(30) NOT NULL,
-  `atualizado` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `criado` datetime NOT NULL DEFAULT current_timestamp()
+  `atualizado` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `criado` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -808,13 +925,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `batalhas`
 --
 ALTER TABLE `batalhas`
-  MODIFY `id_batalha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=671;
+  MODIFY `id_batalha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=745;
 
 --
 -- AUTO_INCREMENT de tabela `heroes`
 --
 ALTER TABLE `heroes`
-  MODIFY `id_hero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=552;
+  MODIFY `id_hero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=616;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
