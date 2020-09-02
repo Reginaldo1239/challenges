@@ -1,6 +1,6 @@
 const heroesModel =require('../../../models/heroes');
 let newHero;
-const ID_USUARIO=1;
+const ID_USUARIO=2;
 
 //cria novo heroi para ser usado nos tests  "model function newHero" , "model fuction deleteHero ()" 
 beforeAll(async()=>{
@@ -32,7 +32,7 @@ test('model function newHero ',async()=>{
 })  
 
 test('model fuction getOneHero',async()=>{
-   let getOneHero = await heroesModel.getOneHero({id_usuario:1,id_hero:446});
+   let getOneHero = await heroesModel.getOneHero({id_usuario:2,id_hero:newHero.insertId});
  //  h.id_hero,h.id_usuario,h.nome,h.classse,h.lat,h.lng  
    expect(getOneHero[0]).toEqual(expect.objectContaining(
       {
@@ -46,10 +46,10 @@ test('model fuction getOneHero',async()=>{
       ));
 })
 
-test('modal function updateHero()',async()=>{
+test('modal function updateHero()',async()=>{  
    let values = {
       id_usuario:ID_USUARIO,
-      id_hero:50, 
+      id_hero:newHero.insertId, 
       nome:'newName'+Date.now(),
       class:'A',
       lng:-23.56357870,
@@ -89,6 +89,6 @@ test('moda function listHeroes()',async()=>{
    
 test('model fuction deleteHero ()',async()=>{
    
-   let deleteHero = await heroesModel.deleteHero({id_usuario:1,id_hero:newHero.insertId});
+   let deleteHero = await heroesModel.deleteHero({id_usuario:ID_USUARIO,id_hero:newHero.insertId});
    expect(deleteHero).toEqual(expect.objectContaining({affectedRows:1}))
 })

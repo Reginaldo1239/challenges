@@ -21,7 +21,7 @@
 
     .sub_box_batalha{
         width: 50%;
-        
+        font-size: 14px;
         header{
             background-color: blue;
             color:white;
@@ -35,7 +35,7 @@
         }
         .box_text{
            border-bottom: 1px solid #ccc;
-           padding: 2px 10px;
+           padding: 2px 2px;
 
         }
         
@@ -50,8 +50,6 @@
     .item_lista_batalha_component{
         width: 48%;
         margin: 5px 2px;
-    
-
         .x{      
             span{
                 color:red;
@@ -61,7 +59,8 @@
        
     .box_batalha{
         .sub_box_batalha{
-            font-size: 14px;
+            font-size: 13px;
+
         }
     }
 }

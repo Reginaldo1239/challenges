@@ -27,11 +27,7 @@ export default function ListHeroes (props){
     },[page])  
 
     useEffect(()=>{
-        if(listHeroes.length===0 &&page==1){
-            setListaHeroisVazia(true)
-        }else{
-            setListaHeroisVazia(false)
-        }
+   
     },[listHeroes])
     const getListHeroes= async()=>{
         console.log('listHeroes');
@@ -42,8 +38,12 @@ export default function ListHeroes (props){
                 if(listHeroes.status===200){
                     listHeroes = await listHeroes.data;
                    setListHeroes(listHeroes);
+                   setListaHeroisVazia(false)
                 }else if(listHeroes.status===404){
                     setListHeroes([]);
+                    if(page==1){
+                        setListaHeroisVazia(true)
+                    }
                 }if(listHeroes.status===401){
                     cleanAuth();
                     history.push('/');

@@ -1,6 +1,7 @@
 const request = require('supertest');
-const LOCALHOST = 'http://localhost:3005';
-const  token = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxLCJpYXQiOjE1OTg1NTQ2Mzd9.IZLAOk-IPPz7EG4OORX3jiHRISA5wyM3Knn6cFB0XE0nO0xdLj8nhUw2wNLjlbll807eGg0UMYCaHONyCrtiow'
+const CONFIG = require('../../config')
+const LOCALHOST = `http://localhost:${CONFIG.PORT}`;
+const  token = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoyLCJpYXQiOjE1OTg5NTEyNjl9.2tsNwx2xs5gNHOJL5VuaWf-pevJE-PLJxG4WlJLwC9lwsQwqsSorpy8-5SFRNNR1z-eBdb2K2jVhHXEklpJiUQ'
 
 //postPublic para testes que não exige autenticação
 exports.postPublic =(values)=>{

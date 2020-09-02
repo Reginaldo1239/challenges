@@ -45,6 +45,7 @@ export default function FormLogin(props){
             }
             }catch(e){
                console.log(e)
+               alert('ocorreu um erro tente novamente mais tarde');
             }
 
         } 

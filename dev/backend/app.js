@@ -10,7 +10,7 @@ const routerPrivate = require('./routers/private');
 const routerPublic  = require('./routers/public');
 const authMiddleware = require('./middleware/auth');
 const config = require('../backend/config');
-socketClient.novaAmeaca();
+//socketClient.novaAmeaca();
 app.use(cors())
 app.use(express.json()) // for parsing application/json 
 

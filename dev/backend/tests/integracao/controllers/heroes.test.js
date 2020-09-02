@@ -4,7 +4,19 @@ const faker = require('faker');
 const superTest = require('../../util/supertest');
 
 const app = express();
+let id_hero_global;
+beforeAll(async()=>{
 
+    let body={
+      nome:faker.name.findName(),
+      classe:'A',
+      cidade:'Sao paulo',
+      bairro:'Pinheiros',
+      pais:'brasil'
+    }
+       resultInsert= await superTest.post({body,endPoint:'/hero'});
+       id_hero_global = resultInsert.text.insertId;
+})
 
 
 describe('POST /hero,em caso de sucesso 201',()=>{
@@ -113,12 +125,13 @@ test('faltando o paramentro bairro, é esperado erro 400',async ()=>{
   });
 
   describe('GET /hero:id_hero testa retorno um unico heroi',()=>{
-    let id_hero =40;
-    const endPoint = `/hero/${id_hero}`;
+ 
     test ('retorna info do id do heroi 200',async()=>{
+      
+    let endPoint = `/hero/${id_hero_global}`; 
       let resultGetHero = await superTest.get({endPoint});
       let {status,text} = resultGetHero;
-
+      console.log(resultGetHero)
       expect(status).toEqual(200);
       expect(text[0]).toEqual(expect.objectContaining({
         id_hero:expect.any(Number),
@@ -221,7 +234,8 @@ test('faltando o paramentro bairro, é esperado erro 400',async ()=>{
   })
 
   describe('put hero/id_hero sucesso 200', async()=>{
-    
+  
+
       test(' heroi atualizado com sucesso status 200 affectedRows 1',async()=>{
         let body = {
           nome:faker.name.firstName(),
@@ -230,8 +244,8 @@ test('faltando o paramentro bairro, é esperado erro 400',async ()=>{
           bairro:"Santo Antonio",
           pais:"brasil"
         }
-        let id_hero =50
-        let endPoint = `/hero/${id_hero}`
+
+        let endPoint = `/hero/${id_hero_global}`
        let resultUpdateHero = await superTest.put({endPoint,body});
        let {text,status} = resultUpdateHero;
 
