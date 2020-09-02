@@ -12,10 +12,11 @@
        <p>criei uma pasta socket-client para facilitar a localização de funçoes relacionas a socket e um models/socket-client.js para manipular o banco de dados</p>
         <h2>jwt</h2>
             <p>jwt deixei o token com validade infinita pois em ambiente de desenvolvimento é melhor para testar, mas pode ser colocado um periodo de validade </p>
+            <h2>outros</h2>
             <p>para autenticar as rota privadas usei um middleware que é chamado no backend/app.js, com uma unica chamada serve para validar qualquer solicitação a rotas privadas </p>
             <p>no arquivo servico/geoCoding.js tem a função que troca um endereco por latitude e longitude </p>
             <p>em routers separei as rotas privadas e publicas</p>
-            <h2></h2>
+            <h2>front-end</h2>
     <p>no front-end dividi a aplicação em componentes,containers,paginas ,nos container deixei as partes da aplicação que envolvia alguma logica complexa. no arquivo src/main.scss deixe algumas classes e variaveis em que o uso é comum de varios componentes</p>
     <p> no arquivo src/api/index.js tem as funçoes get,post,put/delete usandas para fazer solicitações ao backend</p>
     
